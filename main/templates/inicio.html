@@ -1,0 +1,120 @@
+<!doctype html>
+{% load static %}
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <title>Inicio</title>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container">
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-link" aria-current="page" href="{% url 'inicio' %}">Inicio</a>
+            <a class="nav-link" aria-current="page" href="{% url 'ver_departamentos' %}">Departamentos</a>
+            <a class="nav-link" aria-current="page" href="{% url 'ver_estacionamientos' %}">Estacionamientos</a>
+            <a class="nav-link" aria-current="page" href="{% url 'ver_vehiculos' %}">Vehículos</a>
+            <a class="nav-link" aria-current="page" href="{% url 'ingresos_salidas' %}">Ingresos/Salidas</a>
+            <a class="nav-link" aria-current="page" href="{% url 'estacionados' %}">Estacionados</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+  </head>
+  <body>
+
+    <div class="container p-3">
+        <div class="row">
+            <div class="col">
+                <div class="card" style="width: 18rem;">
+                    <img src="{% static "inicio/departamentos.jpg"%}" class="card-img-top" alt="Imagen departamentos">
+                    <div class="card-body">
+                        <h5 class="card-title">Departamentos</h5>
+                        <p class="card-text">Apartado para gestionar los departamentos del recinto.</p>
+                        <a href="{% url 'ver_departamentos' %}" class="btn btn-primary">Ir a Departamentos</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card" style="width: 18rem;">
+                    <img src="{% static "inicio/vehiculos.jpg"%}" class="card-img-top" alt="Imagen vehículos">
+                    <div class="card-body">
+                        <h5 class="card-title">Vehículos</h5>
+                        <p class="card-text">Apartado para gestionar los vehículos del recinto.</p>
+                        <a href="{% url 'ver_vehiculos' %}" class="btn btn-primary">Ir a Vehículos</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+              <div class="card" style="width: 18rem;">
+                  <img src="{% static "inicio/estacionamientos.jpg"%}" class="card-img-top" alt="Imagen estacionamientos">
+                  <div class="card-body">
+                      <h5 class="card-title">Estacionamientos</h5>
+                      <p class="card-text">Apartado para gestionar los estacionamientos del recinto.</p>
+                      <a href="{% url 'ver_estacionamientos' %}" class="btn btn-primary">Ir a Estacionamientos</a>
+                  </div>
+              </div>
+          </div>
+        </div>
+        <div class="row pt-3">
+          <div class="col">
+              <div class="card" style="width: 18rem;">
+                  <img src="{% static "inicio/ingresosalida.jpg"%}" class="card-img-top" alt="Imagen ingresos/salidas">
+                  <div class="card-body">
+                      <h5 class="card-title">Ingresos y Salidas</h5>
+                      <p class="card-text">Apartado para visualizar las entradas y salidas de vehículos en el recinto.</p>
+                      <a href="{% url 'ingresos_salidas' %}" class="btn btn-primary">Ir a Ingresos/Salidas</a>
+                  </div>
+              </div>
+          </div>
+          <div class="col">
+              <div class="card" style="width: 18rem;">
+                  <img src="{% static "inicio/estacionados.jpg"%}" class="card-img-top" alt="Imagen estacionados">
+                  <div class="card-body">
+                      <h5 class="card-title">Estacionados</h5>
+                      <p class="card-text">Apartado para visualizar el uso de los estacionamientos.</p>
+                      <a href="{% url 'estacionados' %}" class="btn btn-primary">Ir a Estacionados</a>
+                  </div>
+              </div>
+          </div>
+          <div class="col invisible">
+            <div class="card" style="width: 18rem;">
+                <img src="#" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title"></h5>
+                    <p class="card-text"></p>
+                    <a href="#" class="btn btn-primary">Ir a </a>
+                </div>
+            </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Funciones -->
+    <script src="{% static "js/functions.js" %}"></script>
+    <script type="text/javascript" src="{% static "js/jquery.js"%}" />
+
+    <!-- jquery confirm -->
+    <link rel="stylesheet" href"{% static 'libs/jquery-confirm/jquery-confirm.min.css' %}">
+    <script src="{% static 'libs/jquery-confirm/jquery-confirm.min.js' %}"></script>
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    -->
+    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+
+
+  </body>
+</html>

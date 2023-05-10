@@ -1,0 +1,28 @@
+{% extends 'vehiculos/layout.html' %}
+{% block content %}
+<div class="container-fluid p-3 rounded-3">
+    <div class="row">
+      <div class="col text-center">
+        <h1 class="display-5 fw-bold">Vehículos</h1>
+      </div>
+      <div class="invisible col justify-content-center align-items-center d-flex">
+        <a class="btn btn-success btn-lg" href="{% url 'agregar_vehiculo' %}">Agregar</a>
+      </div>
+    </div>
+</div>
+
+<div class="container text-center">
+    <form method="post">
+        {% csrf_token %}
+        <div class="mb-3">
+            <label class="form-label">Patente:</label>
+            {{ form.patente }}
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Rut propietario:</label>
+          {{ form.rut_propietario }}
+        </div>
+        <button type="submit" class="btn btn-primary">Editar</button>
+    </form>
+</div>
+{% endblock %}

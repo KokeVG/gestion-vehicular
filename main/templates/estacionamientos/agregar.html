@@ -1,0 +1,37 @@
+{% extends 'estacionamientos/layout.html' %}
+{% block content %}
+
+<div class="container-fluid p-3 rounded-3">
+    <div class="row">
+      <div class="col text-center">
+        <h1 class="display-5 fw-bold">Estacionamientos</h1>
+      </div>
+      <div class="invisible col justify-content-center align-items-center d-flex">
+        <a class="btn btn-success btn-lg" href="{% url 'agregar_estacionamiento' %}">Agregar</a>
+      </div>
+    </div>
+</div>
+
+<div class="container text-center">
+    <form method="post">
+      {% csrf_token %}
+      <div class="mb-3">
+        <label class="form-label">Estacionamiento:</label>
+        {{ form.estacionamiento }}
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Departamento:</label>
+        {{ form.id_departamento }}
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Vehículo:</label>
+        {{ form.id_vehiculo }}
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Estado:</label>
+        {{ form.estado }}
+      </div>
+      <button type="submit" class="btn btn-primary">Agregar</button>
+    </form>
+</div>
+{% endblock %}
